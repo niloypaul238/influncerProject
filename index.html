@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Influencer products html css project </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    html, body{
+        width: 100%;
+        height: 100vh;
+    }
+    #maminSection{
+        width: 90%;
+        margin: auto;
+
+    }
+    nav{
+        margin-top: 2rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+
+    }
+    .equelClass{
+        display: none;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-between;
+    }
+    nav ul li{
+        list-style: none;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: black;
+    }
+    nav h2{
+        font-size: 1.6rem;
+    }
+    #header{
+        margin-top: 3rem;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    #header div:nth-child(2){
+        width: 400px;
+        height: 400px;
+        border: 1px solid rgba(0, 0, 0, 0.226);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        
+    }
+    #header div:nth-child(2) img{
+        background-color: rgba(233, 211, 250, 0.26);
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        transform: scale(.8);
+    }
+
+    .headerLeft h2{
+        color: #3A3A3A;
+        font-size: 3rem;
+        margin-top: .3rem;
+    }
+    .headerLeft P{
+        margin-top: .3rem;
+    }
+    .headerLeft button{
+        background: #E02C6D;
+        color: white;
+        margin-top: 1rem;
+        border: none;
+        padding: .8rem .9rem;
+        border-radius: 1.3rem;
+        border: 1px solid white;
+        transition: all .3s ease-in;
+    }
+
+    .headerLeft button:hover{
+        border: 1px solid #E02C6D;
+        background: transparent;
+        color: black;
+    }
+
+    /* sponcer code css*/
+    #sponcer{
+        padding: 0rem 3rem;
+        margin-top: 6rem;
+        display: flex;
+        flex-direction: row;
+        row-gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    /* collection css code */
+    #collection{
+        width: 100%;
+        margin-top: 9rem;
+    }
+    #collection h3{
+        text-align: center;
+        margin-bottom: 4rem;
+        font-size: 2rem;
+    }
+    .seeMore{
+        margin-top: 2rem;
+        text-align: end;
+        color: #E02C6D;
+        cursor: pointer;
+    }
+    .seeMore i{
+        color: #E02C6D;
+    }
+
+    .cards{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1.5rem;
+    }
+    .carfd{
+        padding: 1rem;
+        box-shadow: 0px .8px 9px rgba(0, 0, 0, 0.288);
+        border-radius: 6px;
+    }
+    .carfd img{
+        width: 100%;
+    }
+    .cards .dis h4{
+        margin: .4rem 0rem;
+        font-size: 1.6rem;
+    }
+    .dis h6{
+        font-size: 1rem;
+    }
+    .dis p{
+        margin: .7rem 0rem;
+    }
+    .start{
+        display: flex;
+        margin: .4rem 0rem;
+    }
+    .start i{
+        color: #ffd102;
+    }
+
+
+    /* featured code start css */
+   #featured{
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: 1fr  1.5fr;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    } 
+
+    #featured h2{
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    #featured p{
+        margin-bottom: 1rem;
+    }
+#featured button{
+    background-color: #E02C6D;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: .9rem 2.5rem;
+    cursor: pointer;
+    border: 1px solid white;
+    transition: .2s;
+}
+#featured button:hover{
+    border: 1px solid #E02C6D;
+    background: transparent;
+    color: black;
+}
+/* footer section */
+footer{
+    background-color: #031b5f;
+    text-align: center;
+    padding: 3rem;
+    margin-top: 3rem;
+}
+footer h3{
+    color: white;
+    font-size: 1.6rem;
+}
+footer p{
+    color: rgb(255, 255, 255);
+    margin-top: .6rem;
+    font-size: 10px;
+}
+footer div{
+    margin-top: .5rem;
+}
+footer div i{
+    background: #52505080;
+    border-radius: 50%;
+    padding: .4rem;
+    color: white;
+}
+
+
+@media (max-width:1100px){
+    nav{
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .headerLeft h2{
+        color: #3A3A3A;
+        font-size: 2.4rem;
+        margin-top: .1rem;
+    }
+   #header div:nth-child(2){
+        width: 300px;
+        height: 300px;
+        
+    }
+    #header div:nth-child(2) img{
+        width: 240px;
+        height: 240px;
+        transform: scale();
+    
+    }
+
+    #sponcer{
+        gap: 2rem;
+    }
+
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+
+    #featured{
+        gap: 0rem 2rem;
+    } 
+
+    #featured h2{
+        font-size: 2rem;
+    }
+
+    .seeMore{
+        text-align: start;
+    }
+
+
+}
+
+@media (max-width:700px) {
+    nav{
+        grid-template-columns: 1fr 2fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    nav ul {
+        justify-content: end;
+    }
+    nav ul li a i{
+        font-size: 2rem;
+    }
+    nav h2{
+        text-align: center;
+        font-size: 1.9rem;
+    }
+    .sameNav{
+        display: none;
+    }
+    .equelClass{
+        display: block;
+        font-size: 2rem;
+    }
+
+    #header{
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 1rem;
+    }
+
+    .cards{
+        grid-template-columns: 1fr;
+    }
+    .cards .dis h4{
+        margin: .4rem 0rem;
+        font-size: 3rem;
+    }
+    .dis h6{
+        font-size: 2rem;
+    }
+    .dis p{
+        font-size: 1.7rem;
+        color: #3A3A3A;
+    }
+
+    .start{
+         margin: 1rem 0rem;
+    }
+    .start i{
+        font-size: 1.6rem;
+       
+    }
+    .start span{
+        font-size: 1.6rem;
+    }
+
+
+    .seeMore{
+        font-size: 2rem;
+    }
+
+    #featured{
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 1rem;    
+    }
+#featured div{
+    text-align: center;
+}
+
+
+
+}
+</style>
+<body>
+    <main id="maminSection">
+
+        <!-- header section -->
+         <nav>
+            <i class="fa-solid fa-equals equelClass"></i>
+            <h2>Influencer products</h2>
+            <ul>
+                <li class="sameNav"><a href="#">Home</a></li>
+                <li class="sameNav"><a href="#">Products</a></li>
+                <li class="sameNav"><a href="#">Sign up</a></li>
+                <li class="sameNav"><a href="#">Log In</a></li>
+                <li class="sameNav"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+         </nav>
+
+         <header id="header">
+            <div class="headerLeft">
+                <h2>Start your Journey as </h2>
+                <h2>Influencer </h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem vestibulum sed scelerisque eros. Lectus faucibus.</p>
+                <button>Preebook now <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div>
+                <img src="images/main-camera.png" alt="">
+            </div>
+            
+         </header>
+
+         <!-- sponcer section  -->
+          <section id="sponcer">
+            <img src="logos/Alibaba.svg" alt="">
+            <img src="logos/Amazon.svg" alt="">
+            <img src="logos/Daraz.pk Logo.svg" alt="">
+            <img src="logos/Ebay.svg" alt="">
+            <img src="logos/Rakuten.svg" alt="">
+            <img src="logos/Target.svg" alt="">
+            <img src="logos/Walmart.svg" alt="">
+          </section>
+
+          <!-- Popular Collection code start -->
+          <section id="collection">
+            <h3>Popular Collection</h3>
+            <div class="cards">
+                <div class="carfd">
+                    <img src="images/action.png" alt="">
+                    <div class="dis">
+                        <h4>Flex Tripod</h4>
+                        <h6>$50.48</h6>
+                        <div class="start">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half"></i>
+                            <span>4.9</span>
+                        </div>
+                        <p>Wordwide shifting <br> available</p>
+                        <p>Buyers protection possible!</p>
+                    </div>
+                </div>
+
+                <div class="carfd">
+                    <img src="images/mic.png" alt="">
+                    <div class="dis">
+                        <h4>microphone</h4>
+                        <h6>$50.48</h6>
+                        <div class="start">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half"></i>
+                            <span>4.9</span>
+                        </div>
+                        <p>Wordwide shifting <br> available</p>
+                        <p>Buyers protection possible!</p>
+                    </div>
+                </div>
+
+                <div class="carfd">
+                    <img src="images/airpod.png" alt="">
+                    <div class="dis">
+                        <h4>Airbuds</h4>
+                        <h6>$50.48</h6>
+                        <div class="start">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half"></i>
+                            <span>4.9</span>
+                        </div>
+                        <p>Wordwide shifting <br> available</p>
+                        <p>Buyers protection possible!</p>
+                    </div>
+                </div>
+
+                <div class="carfd">
+                    <img src="images/drone.png" alt="">
+                    <div class="dis">
+                        <h4>Drone</h4>
+                        <h6>$50.48</h6>
+                        <div class="start">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half"></i>
+                            <span>4.9</span>
+                        </div>
+                        <p>Wordwide shifting <br> available</p>
+                        <p>Buyers protection possible!</p>
+                    </div>
+                </div>
+
+                <div class="carfd">
+                    <img src="images/lights.png" alt="">
+                    <div class="dis">
+                        <h4>Light Setup</h4>
+                        <h6>$50.48</h6>
+                        <div class="start">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half"></i>
+                            <span>4.9</span>
+                        </div>
+                        <p>Wordwide shifting <br> available</p>
+                        <p>Buyers protection possible!</p>
+                    </div>
+                </div>
+
+                <div class="carfd">
+                    <img src="images/setup.png" alt="">
+                    <div class="dis">
+                        <h4>Photoshoot set</h4>
+                        <h6>$50.48</h6>
+                        <div class="start">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half"></i>
+                            <span>4.9</span>
+                        </div>
+                        <p>Wordwide shifting <br> available</p>
+                        <p>Buyers protection possible!</p>
+                    </div>
+                </div>
+
+                <div class="carfd">
+                    <img src="images/camera.png" alt="">
+                    <div class="dis">
+                        <h4>Vlogging Camera</h4>
+                        <h6>$50.48</h6>
+                        <div class="start">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half"></i>
+                            <span>4.9</span>
+                        </div>
+                        <p>Wordwide shifting <br> available</p>
+                        <p>Buyers protection possible!</p>
+                    </div>
+                </div>
+
+                <div class="carfd">
+                    <img src="images/single-light.png" alt="">
+                    <div class="dis">
+                        <h4>Green Screen</h4>
+                        <h6>$57.48</h6>
+                        <div class="start">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half"></i>
+                            <span>4.9</span>
+                        </div>
+                        <p>Wordwide shifting <br> available</p>
+                        <p>Buyers protection possible!</p>
+                    </div>
+                </div>
+
+                <div class="carfd">
+                    <img src="images/action.png" alt="">
+                    <div class="dis">
+                        <h4>Action Camera</h4>
+                        <h6>$53.48</h6>
+                        <div class="start">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half"></i>
+                            <span>4.9</span>
+                        </div>
+                        <p>Wordwide shifting <br> available</p>
+                        <p>Buyers protection possible!</p>
+                    </div>
+                </div>
+            </div>
+            <p class="seeMore">See More <i class="fa-solid fa-arrow-right"></i></p>
+          </section>
+
+
+          <!-- Featured products at one place -->
+           <section id="featured">
+            <img src="images/gear.png" alt="">
+            <div class="">
+                <h2>Featured products at one place</h2>
+                <P>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</P>
+                <button>Join Now <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+           </section>
+
+    </main>
+    
+
+    <!-- fotter section  -->
+            <footer>
+                <h3>Influencer products</h3>
+                <p>Copyright © 2020  influencer products</p>
+                <p>All rights reserved</p>
+                <div class="icon">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-solid fa-globe"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </footer>
+
+
+</body>
+</html>
